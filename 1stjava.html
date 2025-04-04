@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="background-color: aqua;">
+    <input type="text" style="background-color: lightgreen;" disabled id ="display">
+    <br>
+    <br>
+    <button style="background-color:lightpink;" onclick="inputButton(this)">1</button>
+    <button style="background-color: lightpink;" onclick="inputButton(this)">2</button>
+    <button style="background-color: lightpink;" onclick="inputButton(this)">3</button>
+    <button style="background-color: lightpink;" onclick="inputButton(this)">4</button>
+    <button style="background-color: lightpink;" onclick="inputButton(this)">5</button>
+    <br>
+    <button style="background-color: lightpink;" onclick="inputButton(this)">6</button>
+    <button style="background-color: lightpink;" onclick="inputButton(this)">7</button>
+    <button style="background-color: lightpink;" onclick="inputButton(this)">8</button>
+    <button style="background-color: lightpink;" onclick="inputButton(this)">9</button>
+    <button style="background-color: lightpink;" onclick="inputButton(this)">0</button>
+    <br>
+    <button onclick="inputButton(this)">+</button>
+    <button onclick="inputButton(this)">-</button>
+    <button onclick="inputButton(this)">*</button>
+    <button onclick="inputButton(this)">/</button>
+    <button onclick="inputButton(this)">%</button>
+    <button onclick="clearButton(this)">Clear</button>
+    <button onclick="resultButton(this)">=</button>
+    </div>
+
+
+<script >
+    function inputButton(button){
+        let value = button.innerText
+        let a = document.getElementById('display')
+        a.value += value
+    }
+    function resultButton(button){
+        let a = document.getElementById('display')
+        a.value = eval(a.value)
+    }
+    function clearButton(button){
+        let a = document.getElementById('display')
+        a.value = ' '
+    }
+</script>
+<script src="1stjava.js"></script>
+</body>
+</html>
